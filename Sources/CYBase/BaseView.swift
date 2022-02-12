@@ -14,14 +14,14 @@ open class BaseView: UIView {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        loadFromNib
+        loadFromNib()
         addViewComponents()
         setupViews()
     }
     
     public required init?(coder: NSCoder) {
         super.init(coder: coder)
-        loadFromNib
+        loadFromNib()
         addViewComponents()
         setupViews()
     }
