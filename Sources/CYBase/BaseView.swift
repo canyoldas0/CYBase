@@ -20,7 +20,6 @@ open class BaseView: UIView {
     
     public required init?(coder: NSCoder) {
         super.init(coder: coder)
-        loadFromNib()
         addViewComponents()
         setupViews()
     }
