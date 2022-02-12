@@ -14,7 +14,6 @@ open class BaseView: UIView {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        loadFromNib()
         addViewComponents()
         setupViews()
     }
@@ -26,14 +25,9 @@ open class BaseView: UIView {
         setupViews()
     }
     
-    open func loadFromNib() -> UIView? {}
     open func addViewComponents() {}
     open func setupViews() {}
     
 }
-
-
-
-
 
 #endif

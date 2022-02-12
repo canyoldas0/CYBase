@@ -25,12 +25,8 @@ open class CYViewController<V>: UIViewController {
         configureUI()
     }
     
-    open func setupVC() {
-        
-    }
-    
-    open func configureUI() {
-    }
+    open func setupVC() { }
+    open func configureUI() { }
     
 }
 #endif
