@@ -13,7 +13,7 @@ import CoreGraphics
 // MARK: Attributes of View
 public extension UIView {
         
-    public static var identifier: String {
+     static var identifier: String {
         return String(describing: self)
     }
     
@@ -59,6 +59,12 @@ public extension UIView {
     func roundCorner(with radius: CGFloat? = nil) {
         self.clipsToBounds = true
         self.layer.cornerRadius = radius ?? (min(self.width,self.height) / 2 )
+    }
+    
+    func loadNibFile() {
+        let viewFromNib = Bundle.main.loadNibNamed(Self.identifier, owner: self, options: nil)![0] as! UIView
+        viewFromNib.frame = self.bounds
+        addSubview(viewFromNib)
     }
 }
 
