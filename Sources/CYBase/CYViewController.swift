@@ -15,7 +15,7 @@ open class CYViewController<V>: UIViewController {
     public var viewModel: V!
     
     lazy var loadingView: UIActivityIndicatorView = {
-        let temp = UIActivityIndicatorView(style: .medium)
+        let temp = UIActivityIndicatorView()
         temp.translatesAutoresizingMaskIntoConstraints = false
         temp.isHidden = true
         return temp
