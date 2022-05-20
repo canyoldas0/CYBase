@@ -45,11 +45,13 @@ open class CYViewController<V>: UIViewController {
         
     }
     
+    @MainActor
     open func startLoading() {
         loadingView.startAnimating()
         loadingView.isHidden = false
     }
     
+    @MainActor
     open func stopLoading() {
         loadingView.stopAnimating()
         loadingView.isHidden = true
