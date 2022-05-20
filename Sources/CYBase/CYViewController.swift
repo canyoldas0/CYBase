@@ -45,16 +45,19 @@ open class CYViewController<V>: UIViewController {
         
     }
     
-    @MainActor
     open func startLoading() {
-        loadingView.startAnimating()
-        loadingView.isHidden = false
+        DispatchQueue.main.async {
+            loadingView.startAnimating()
+            loadingView.isHidden = false
+        }
+      
     }
     
-    @MainActor
     open func stopLoading() {
+        DispatchQueue.main.async {
         loadingView.stopAnimating()
         loadingView.isHidden = true
+        }
     }
     
     open func setupVC() { }
